@@ -1,0 +1,52 @@
+<section class="hero is-dark is-bold is-fullheight">
+  <div class="container"><br>
+    <div style="text-align: center">
+      <span class="icon"><i class="fab fa-angular fa-2x"></i></span> <span class="title">Angular Pok&eacute;dex v1.0.0</span><br>
+      <a href="https://bulma.io"><img src="assets/bulma.png" width="200px" alt="Bulma"></a>
+    </div><br>
+    
+    <!-- Search bar -->
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+        <div class="field">
+          <div class="control has-icons-left">
+            <input #query class="input is-rounded" type="text" placeholder="Search Pokemon by Name" (keyup)="filter(query.value)">
+            <span class="icon is-left"><i class="fas fa-volleyball-ball"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pokemon Display Boxes -->
+    <div class="columns is-multiline">
+      <div class="column is-12-tablet is-6-desktop is-4-widescreen" *ngFor="let pokemon of pokedex">
+        <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="assets/images/{{ pokemon.id }}.png" alt="{{ pokemon.name }}">
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>{{ pokemon.id }} - {{ pokemon.name | titlecase }}</strong>
+                </p>
+                <div class="tags has-addons">
+                  <span class="tag is-dark">{{ pokemon.types[0] }}</span>
+                  <span class="tag is-info">{{ pokemon.types[1] }}</span>
+                </div>
+                <p>
+                  <strong>Height:</strong> {{ pokemon.height.maximum }}<br>
+                  <strong>Weight:</strong> {{ pokemon.weight.maximum }}
+                </p>
+              </div>
+            </div>      
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
