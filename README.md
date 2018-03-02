@@ -1,6 +1,11 @@
 # Angular Pokedex
 This application searches through the 151 original pokemon.
 
+<p align="center">
+    <img width="500" height="266" src="./src/assets/homepage.png"><br>
+    <a href="http://ng-poke0.herokuapp.com/" target="_blank">Angular Pokedex</a>
+</p>
+
 ## Versions
 * [Angular CLI](https://github.com/angular/angular-cli) v1.7.2
 * Angular v5.2.7
