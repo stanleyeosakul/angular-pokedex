@@ -3,7 +3,6 @@ This application searches through the 151 original pokemon.
 
 <p align="center">
     <img width="500" height="266" src="./src/assets/homepage.png"><br>
-    <a href="http://ng-poke0.herokuapp.com/" target="_blank">Angular Pokedex</a>
 </p>
 
 ## Versions
